@@ -1,0 +1,40 @@
+{
+  "name": "lizards-and-pumpkins/logging",
+  "description": "Lizards & Pumpkins Logging",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Tim Bezhashvyly",
+      "email": "tim@lizardsandpumpkins.com"
+    },
+    {
+      "name": "Fabian Blechsmidt",
+      "email": "fabian@lizardsandpumpkins.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "lizards-and-pumpkins/core": "dev-master"
+  },
+  "require-dev": {
+    "ext-xdebug": "*",
+    "phpunit/phpunit": "~9.2",
+    "lizards-and-pumpkins/coding-standards": "dev-master"
+  },
+  "autoload" : {
+    "psr-4": { "LizardsAndPumpkins\\Logging\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LizardsAndPumpkins\\": [
+        "tests/Unit/Suites"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit -c tests/Unit/phpunit.xml.dist",
+    "sniff": "vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --runtime-set ignore_errors_on_exit true -p --colors --encoding=utf-8 --standard=vendor/lizards-and-pumpkins/coding-standards/src/LizardsAndPumpkins/ src/ tests/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
