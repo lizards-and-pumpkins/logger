@@ -9,7 +9,7 @@ use LizardsAndPumpkins\Logging\LogMessageWriter;
 use LizardsAndPumpkins\Logging\Writer\Exception\UnableToCreateLogDirectoryException;
 use LizardsAndPumpkins\Logging\Writer\Exception\UnableToCreateLogFileException;
 use LizardsAndPumpkins\Logging\Writer\Exception\UnableToWriteToLogFileException;
-use LizardsAndPumpkins\TestFileFixtureTrait;
+use LizardsAndPumpkins\Util\FileSystem\TestFileFixtureTrait;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
